@@ -3,8 +3,8 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
-import Home from './home'
-import About from './about'
+import Home from '../home/home'
+import About from '../about/about'
 
 export default class Main extends Component {
   render() {
