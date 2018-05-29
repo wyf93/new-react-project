@@ -3,8 +3,17 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
-import Home from '../home/home'
-import About from '../about/about'
+import Loadable from 'react-loadable'
+
+const Home = Loadable({
+  loader: () => import('../home/home'),
+  loading: () => null
+})
+
+const About = Loadable({
+  loader: () => import('../about/about'),
+  loading: () => null
+})
 
 export default class Main extends Component {
   render() {

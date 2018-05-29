@@ -1,7 +1,6 @@
 {
     "env": {
         "browser": true,
-        "node": true,
         "commonjs": true,
         "es6": true
     },
@@ -16,6 +15,7 @@
     "plugins": [
         "react"
     ],
+    "parser": "babel-eslint",
     "rules": {
         "indent": [
             "error",
