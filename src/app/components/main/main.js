@@ -11,7 +11,7 @@ const Home = Loadable({
 })
 
 const About = Loadable({
-  loader: () => import('../about/about'),
+  loader: () => import('../about/about-container'),
   loading: () => null
 })
 
