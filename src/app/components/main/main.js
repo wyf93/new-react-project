@@ -4,6 +4,8 @@ import {
   Route
 } from 'react-router-dom'
 import Loadable from 'react-loadable'
+import {injectReducer} from '../../store/store'
+import {hiCount} from '../../reducers/about'
 
 const Home = Loadable({
   loader: () => import('../home/home'),
@@ -11,7 +13,10 @@ const Home = Loadable({
 })
 
 const About = Loadable({
-  loader: () => import('../about/about-container'),
+  loader: () => {
+    injectReducer('about', {hiCount})
+    return import('../about/about-container')
+  },
   loading: () => null
 })
 

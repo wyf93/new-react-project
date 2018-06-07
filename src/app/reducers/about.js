@@ -1,4 +1,3 @@
-import {combineReducers} from 'redux'
 import {SAY_HI} from '../actionTypes'
 
 const hiCount = (state = 0, action) => {
@@ -10,6 +9,6 @@ const hiCount = (state = 0, action) => {
   }
 }
 
-export default combineReducers({
+export{
   hiCount
-})
+}
