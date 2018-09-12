@@ -5,9 +5,10 @@ export default class About extends PureComponent {
   render() {
     return (
       <div>
-        About
+        <span>{this.props.hiCount}</span>
+        About()
         <img src="/assets/images/avatar.png" alt=""/>
-        <img src={img} alt=""/>
+        <img src={img} alt="" onClick={this.props.sayHi}/>
       </div>
     )
   }

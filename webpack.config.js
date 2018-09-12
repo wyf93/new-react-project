@@ -7,7 +7,8 @@ module.exports = {
   entry: './src/app/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: '[name].bundle.js',
+    chunkFilename: '[name].bundle.js'
   },
   module: {
     rules: [{
@@ -47,5 +48,10 @@ module.exports = {
     new CopyWebpackPlugin([
       {from: 'src/assets/', to: 'assets/'}
     ])
-  ]
+  ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all'
+    }
+  }
 }
